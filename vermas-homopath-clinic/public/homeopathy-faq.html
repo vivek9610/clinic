@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Homeopathy FAQ (20 Common Questions) — Verma's Homopath Clinic</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
+    .faq-search-box {
+      max-width: 600px;
+      margin: 0 auto 2.5rem;
+      position: relative;
+    }
+    .faq-search-box input {
+      width: 100%;
+      padding: 14px 20px 14px 45px;
+      border-radius: 30px;
+      border: 1.5px solid rgba(46, 134, 193, 0.25);
+      font-size: 0.95rem;
+      font-family: 'Poppins', sans-serif;
+      outline: none;
+      transition: var(--transition);
+      box-shadow: 0 4px 15px rgba(26, 82, 118, 0.05);
+    }
+    .faq-search-box input:focus {
+      border-color: var(--green-mid);
+      box-shadow: 0 6px 20px rgba(46, 134, 193, 0.15);
+    }
+    .faq-search-box .search-icon {
+      position: absolute;
+      left: 18px;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 1.1rem;
+      color: var(--text-light);
+    }
+  </style>
+</head>
+<body>
+
+<!-- ══════════════════ NAVBAR ══════════════════ -->
+<nav class="navbar">
+  <div class="nav-brand">
+    <img src="images/clinic-logo.png" alt="Verma Homeopathic Clinic" class="nav-logo-img" />
+    <h1>Verma Homeopathic Clinic<small>Natural Healing &middot; Lasting Wellness</small></h1>
+  </div>
+  <ul class="nav-links" id="navLinks">
+    <li class="nav-item-home"><a href="index.html">Home</a></li>
+    <li class="nav-item-about"><a href="about.html">About Us</a></li>
+    <li class="nav-item-treatment"><a href="Treatment.html">Treatment</a></li>
+    <li class="nav-item-contact"><a href="contact.html">Contact</a></li>
+    <li class="nav-btn-item"><a href="consultation.html" class="btn-consult">Book Consultation</a></li>
+    <li class="nav-dropdown">
+      <div class="mobile-nav-heading">Resources</div>
+      <a href="#" class="dropdown-toggle active">Resources <span class="arrow">&#9662;</span></a>
+      <ul class="dropdown-menu">
+        <li><a href="diet-lifestyle.html">Diet &amp; Lifestyle</a></li>
+        <li><a href="online-consultation.html">Online Consultation</a></li>
+        <li><a href="homeopathy-faq.html" class="active">Homeopathy FAQ</a></li>
+      </ul>
+    </li>
+  </ul>
+  <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- ══════════════════ PAGE BANNER ══════════════════ -->
+<div class="page-banner">
+  <span class="pill-label" style="background: rgba(255,255,255,0.2); color: #fff; margin-bottom: 0.8rem; display: inline-block;">Knowledge Base</span>
+  <h1>Frequently Asked Questions</h1>
+  <p style="max-width: 600px; margin: 0 auto;">Everything you need to know about classical homeopathy, constitutional remedies, treatment timelines, and safety.</p>
+</div>
+
+<!-- ══════════════════ FAQ SECTION ══════════════════ -->
+<section class="faq-section">
+  <div class="container">
+    
+    <!-- Search Bar -->
+    <div class="faq-search-box">
+      <span class="search-icon"></span>
+      <input type="text" id="faqSearch" placeholder="Search questions (e.g., coffee, children, steroids, time)..." onkeyup="filterFAQ()">
+    </div>
+
+    <div class="faq-container" id="faqList">
+
+      <!-- Q1 -->
+      <div class="faq-item active">
+        <div class="faq-question" onclick="toggleFAQ(this)">
+          <div class="faq-q-text">
+            <span class="faq-num">1</span>
+            <span>What is classical homeopathy and how does it work?</span>
+          </div>
+          <span class="faq-icon">+</span>
+        </div>
+        <div class="faq-answer">
+          <p>Classical homeopathy is an individualised medical science founded by Dr. Samuel Hahnemann. It operates on the law of <em>"Similia Similibus Curentur"</em> (Like Cures Like). Instead of treating symptoms in isolation or suppressing them, it matches a single homeopathic remedy to the patient's complete physical, emotional, and constitutional state, stimulating the body's self-healing vital force.</p>
+        </div>
+      </div>
+
+      <!-- Q2 -->
+      <div class="faq-item">
+        <div class="faq-question" onclick="toggleFAQ(this)">
+          <div class="faq-q-text">
+            <span class="faq-num">2</span>
+            <span>Is homeopathy really slow to act, or is that a myth?</span>
+          </div>
+          <span class="faq-icon">+</span>
+        </div>
+        <div class="faq-answer">
+          <p>It is a common myth. In acute conditions like sudden fever, cold, diarrhoea, or acute colic, an accurately chosen homeopathic remedy acts within minutes to hours. In deep-seated chronic conditions that have existed for 5–10 years (such as eczema, psoriasis, or arthritis), lasting cure takes time because the body must rebuild and reverse tissue changes naturally from the root.</p>
+        </div>
+      </div>
+
+      <!-- Q3 -->
+      <div class="faq-item">
+        <div class="faq-question" onclick="toggleFAQ(this)">
+          <div class="faq-q-text">
+            <span class="faq-num">3</span>
+            <span>Do homeopathic medicines have any side effects?</span>
+          </div>
+          <span class="faq-icon">+</span>
+        </div>
+        <div class="faq-answer">
+          <p>No. Homeopathic remedies are prepared through potentisation (serial dilution and succussion), which extracts the medicinal energetic pattern while removing all chemical toxicity. They do not damage the liver, kidneys, or digestive tract, and cause zero physiological addiction or rebound effects.</p>
+        </div>
+      </div>
+
+      <!-- Q4 -->
+      <div class="faq-item">
+        <div class="faq-question" onclick="toggleFAQ(this)">
+          <div class="faq-q-text">
+            <span class="faq-num">4</span>
+            <span>Do homeopathic medicines contain steroids or heavy metals?</span>
+          </div>
+          <span class="faq-icon">+</span>
+        </div>
+        <div class="faq-answer">
+          <p>Strictly no. Genuine classical homeopathic practitioners never use steroids. The perception that fast-acting remedies contain steroids is completely false; pure homeopathic remedies are sourced from plants, minerals, and natural elements and are rigorously tested according to pharmacopoeial standards.</p>
+        </div>
+      </div>
+
+      <!-- Q5 -->
+      <div class="faq-item">
+        <div class="faq-question" onclick="toggleFAQ(this)">
+          <div class="faq-q-text">
+            <span class="faq-num">5</span>
+            <span>Why are homeopathic medicines given as sweet white sugar globules?</span>
+          </div>
+          <span class="faq-icon">+</span>
+        </div>
+        <div class="faq-answer">
+          <p>The white globules are made from pure pharmaceutical lactose or cane sugar. They serve as an inert, neutral carrier (vehicle) for the liquid medicinal potency. When medicated, the globules absorb the remedy and allow slow, gentle mucosal absorption under the tongue.</p>
+        </div>
+      </div>
+
+      <!-- Q6 -->
+      <div class="faq-item">
+        <div class="faq-question" onclick="toggleFAQ(this)">
+          <div class="faq-q-text">
+            <span class="faq-num">6</span>
+            <span>Can diabetic patients take these sweet sugar pills?</span>
+          </div>
+          <span class="faq-icon">+</span>
+        </div>
+        <div class="faq-answer">
+          <p>Yes, completely safely. The quantity of sugar in 4–5 small globules taken daily is negligible (less than a fraction of a teaspoon of milk) and has no measurable impact on blood sugar levels. For strict diabetics, remedies can also be dispensed in distilled water drops.</p>
+        </div>
+      </div>
+
+      <!-- Q7 -->
+      <div class="faq-item">
+        <div class="faq-question" onclick="toggleFAQ(this)">
+          <div class="faq-q-text">
+            <span class="faq-num">7</span>
+            <span>Do I have to stop eating raw onions, garlic, or drinking coffee?</span>
+          </div>
+          <span class="faq-icon">+</span>
+        </div>
+        <div class="faq-answer">
+          <p>In classical practice, you simply need to keep a 30-minute time gap between taking your medicine and consuming strong pungent substances like raw onion, garlic, coffee, mint, or hing. Cooked onions and garlic in everyday meals do not interfere with remedy action.</p>
+        </div>
+      </div>
+
+      <!-- Q8 -->
+      <div class="faq-item">
+        <div class="faq-question" onclick="toggleFAQ(this)">
+          <div class="faq-q-text">
+            <span class="faq-num">8</span>
+            <span>Can I take my regular allopathic medicines alongside homeopathy?</span>
+          </div>
+          <span class="faq-icon">+</span>
+        </div>
+        <div class="faq-answer">
+          <p>Yes. Critical conventional medications (for hypertension, diabetes, thyroid, heart conditions, or epilepsy) should never be stopped abruptly. We keep a 30–60 minute gap between allopathic and homeopathic doses. As your body heals and parameters improve, allopathic doses can be gradually tapered under medical supervision.</p>
+        </div>
+      </div>
+
+      <!-- Q9 -->
+      <div class="faq-item">
+        <div class="faq-question" onclick="toggleFAQ(this)">
+          <div class="faq-q-text">
+            <span class="faq-num">9</span>
+            <span>Is homeopathy safe for newborn babies and young children?</span>
+          </div>
+          <span class="faq-icon">+</span>
+        </div>
+        <div class="faq-answer">
+          <p>Homeopathy is one of the safest treatments for infants and children. Because remedies are gentle, sweet-tasting, and non-invasive, kids take them happily. It is extraordinarily effective for recurrent colds, tonsillitis, teething trouble, colic, eczema, and weak immunity.</p>
+        </div>
+      </div>
+
+      <!-- Q10 -->
+      <div class="faq-item">
+        <div class="faq-question" onclick="toggleFAQ(this)">
+          <div class="faq-q-text">
+            <span class="faq-num">10</span>
+            <span>Can pregnant women take homeopathic remedies safely?</span>
+          </div>
+          <span class="faq-icon">+</span>
+        </div>
+        <div class="faq-answer">
+          <p>Yes. Homeopathy is safe during pregnancy and lactation. It helps manage morning sickness, backache, acidity, mood fluctuations, and anaemia without any risk of fetal harm or developmental defects.</p>
+        </div>
+      </div>
+
+      <!-- Q11 -->
+      <div class="faq-item">
+        <div class="faq-question" onclick="toggleFAQ(this)">
+          <div class="faq-q-text">
+            <span class="faq-num">11</span>
+            <span>Why does Dr. Verma ask so many personal questions during consultation?</span>
+          </div>
+          <span class="faq-icon">+</span>
+        </div>
+        <div class="faq-answer">
+          <p>In classical homeopathy, we treat the individual who has the disease, not merely the disease name. Your sleep posture, temperature sensitivity (chilliness vs warmth), food cravings, emotional temperament, stress triggers, and fears are the unique genetic fingerprints that lead us to your exact constitutional similimum.</p>
+        </div>
+      </div>
+
+      <!-- Q12 -->
+      <div class="faq-item">
+        <div class="faq-question" onclick="toggleFAQ(this)">
+          <div class="faq-q-text">
+            <span class="faq-num">12</span>
+            <span>What is a 'Constitutional Remedy'?</span>
+          </div>
+          <span class="faq-icon">+</span>
+        </div>
+        <div class="faq-answer">
+          <p>A constitutional remedy is a single, deeply matching medicine chosen to cover your whole physical build, psychological makeup, past illnesses, and family history. It balances your entire system, strengthens your immunity, and resolves chronic disease from the deepest level.</p>
+        </div>
+      </div>
+
+      <!-- Q13 -->
+      <div class="faq-item">
+        <div class="faq-question" onclick="toggleFAQ(this)">
+          <div class="faq-q-text">
+            <span class="faq-num">13</span>
+            <span>Why do you prescribe only one single medicine rather than a combination?</span>
+          </div>
+          <span class="faq-icon">+</span>
+        </div>
+        <div class="faq-answer">
+          <p>True classical homeopathy strictly follows the Single Remedy Principle. Commercial 'patent mixtures' blend 5–10 ingredients with guesswork. A single accurately matched remedy acts with scientific precision without causing conflicting drug reactions or clouding your symptom picture.</p>
+        </div>
+      </div>
+
+      <!-- Q14 -->
+      <div class="faq-item">
+        <div class="faq-question" onclick="toggleFAQ(this)">
+          <div class="faq-q-text">
+            <span class="faq-num">14</span>
+            <span>What is homeopathic aggravation? Will my disease increase first?</span>
+          </div>
+          <span class="faq-icon">+</span>
+        </div>
+        <div class="faq-answer">
+          <p>In a small percentage of chronic cases (especially long-suppressed skin conditions), a mild, temporary initial aggravation may occur. This is actually a positive clinical sign showing that the body's vital force has awakened to push the disease outwards. It settles quickly, followed by sustained, long-term improvement.</p>
+        </div>
+      </div>
+
+      <!-- Q15 -->
+      <div class="faq-item">
+        <div class="faq-question" onclick="toggleFAQ(this)">
+          <div class="faq-q-text">
+            <span class="faq-num">15</span>
+            <span>How should I take and store my homeopathic pills?</span>
+          </div>
+          <span class="faq-icon">+</span>
+        </div>
+        <div class="faq-answer">
+          <p>Pour the prescribed number of globules into the bottle cap and toss them straight under your tongue without touching them with bare fingers. Store your medicine bottles in a dry, cool cabinet away from direct sunlight, camphor, iodex, electronic radiation, and strong perfumes.</p>
+        </div>
+      </div>
+
+      <!-- Q16 -->
+      <div class="faq-item">
+        <div class="faq-question" onclick="toggleFAQ(this)">
+          <div class="faq-q-text">
+            <span class="faq-num">16</span>
+            <span>Can chronic diseases like eczema, IBS, and arthritis be permanently cured?</span>
+          </div>
+          <span class="faq-icon">+</span>
+        </div>
+        <div class="faq-answer">
+          <p>Yes. By targeting genetic predispositions and immune dysregulation rather than merely applying topical steroid creams or pain suppressants, classical homeopathy achieves long-lasting remission and permanent recovery in thousands of chronic patients.</p>
+        </div>
+      </div>
+
+      <!-- Q17 -->
+      <div class="faq-item">
+        <div class="faq-question" onclick="toggleFAQ(this)">
+          <div class="faq-q-text">
+            <span class="faq-num">17</span>
+            <span>Can kidney stones be dissolved with homeopathy?</span>
+          </div>
+          <span class="faq-icon">+</span>
+        </div>
+        <div class="faq-answer">
+          <p>Homeopathic medicines (such as Berberis Vulgaris, Lycopodium, and Sarsaparilla prescribed constitutionally) are widely celebrated for relieving intense renal colic pain, helping spontaneously expel or dissolve small-to-moderate stones, and crucially altering urine diathesis to prevent recurrent stone formation.</p>
+        </div>
+      </div>
+
+      <!-- Q18 -->
+      <div class="faq-item">
+        <div class="faq-question" onclick="toggleFAQ(this)">
+          <div class="faq-q-text">
+            <span class="faq-num">18</span>
+            <span>How often are follow-up consultations required?</span>
+          </div>
+          <span class="faq-icon">+</span>
+        </div>
+        <div class="faq-answer">
+          <p>For chronic complaints, follow-ups typically take place once every 4 to 6 weeks. This allows sufficient time to monitor internal biological response, review follow-up diagnostic reports, and adjust potency or medicine as your healing advances.</p>
+        </div>
+      </div>
+
+      <!-- Q19 -->
+      <div class="faq-item">
+        <div class="faq-question" onclick="toggleFAQ(this)">
+          <div class="faq-q-text">
+            <span class="faq-num">19</span>
+            <span>Can someone become dependent on or addicted to homeopathic medicines?</span>
+          </div>
+          <span class="faq-icon">+</span>
+        </div>
+        <div class="faq-answer">
+          <p>Never. Homeopathic remedies do not contain narcotics, sedatives, or chemical binding agents. Once health is restored and vitality is stable, the treatment is systematically stopped without any withdrawal symptoms.</p>
+        </div>
+      </div>
+
+      <!-- Q20 -->
+      <div class="faq-item">
+        <div class="faq-question" onclick="toggleFAQ(this)">
+          <div class="faq-q-text">
+            <span class="faq-num">20</span>
+            <span>How can outstation or international patients consult Dr. Aman Verma?</span>
+          </div>
+          <span class="faq-icon">+</span>
+        </div>
+        <div class="faq-answer">
+          <p>We provide a dedicated, secure Online Consultation workflow! You complete an in-depth clinical intake form, share reports on WhatsApp (+91-8949427254), and your personalized prescription is dispatched with medicines couriered across India or internationally.</p>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- CTA Box -->
+    <div style="background: var(--white); border-radius: var(--radius); padding: 3rem 2rem; margin-top: 3.5rem; text-align: center; box-shadow: var(--shadow); border: 1.5px solid rgba(46,134,193,0.15);">
+      <h3 style="font-family:'Playfair Display',serif; color:var(--green-dark); font-size:1.8rem; margin-bottom:0.8rem;">Have a Specific Question About Your Case?</h3>
+      <p style="color:var(--text-mid); max-width:550px; margin:0 auto 1.8rem; font-size:0.95rem;">Speak with Dr. Aman Verma directly or schedule an individual consultation for tailored advice.</p>
+      <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+        <a href="consultation.html" class="btn btn-primary">Book Consultation</a>
+        <a href="https://wa.me/918290168039" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="background:#25d366; color:#fff; border-color:#25d366;">💬 Ask on WhatsApp</a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ══════════════════ FOOTER ══════════════════ -->
+<footer>
+  <div class="footer-grid">
+    <div class="footer-about">
+      <h3>🌿 Verma's Homopath Clinic</h3>
+      <p>Dedicated to authentic classical homeopathic care. Individualized treatment, zero side effects, permanent root-cause healing.</p>
+    </div>
+    <div class="footer-links">
+      <h4>Quick Links</h4>
+      <a href="index.html">Home</a>
+      <a href="about.html">About Us</a>
+      <a href="Treatment.html">Treatment</a>
+      <a href="diet-lifestyle.html">Diet &amp; Lifestyle</a>
+      <a href="online-consultation.html">Online Consultation</a>
+      <a href="homeopathy-faq.html">Homeopathy FAQ</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    <div class="footer-contact">
+      <h4>Clinic Hours</h4>
+      <div class="fc-item"><span>🕘</span><span>Sat–Sun: 9 AM–1 PM</span></div>
+      <div class="fc-item"><span>🕔</span><span>Sat–Sun: 5 PM–8 PM</span></div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 Verma Homeopathic Clinic. All rights reserved.</span>
+    <span>Healing Naturally · Growing Together 🌱</span>
+  </div>
+</footer>
+
+<!-- Floating WhatsApp Button -->
+<a href="https://wa.me/918290168039" class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp" title="Chat on WhatsApp">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+    <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/>
+  </svg>
+</a>
+
+<script src="js/nav.js"></script>
+<script>
+  function toggleFAQ(element) {
+    const item = element.parentElement;
+    item.classList.toggle('active');
+  }
+
+  function filterFAQ() {
+    const input = document.getElementById('faqSearch').value.toLowerCase();
+    const items = document.querySelectorAll('.faq-item');
+    items.forEach(item => {
+      const q = item.querySelector('.faq-question').textContent.toLowerCase();
+      const a = item.querySelector('.faq-answer').textContent.toLowerCase();
+      if (q.includes(input) || a.includes(input)) {
+        item.style.display = 'block';
+      } else {
+        item.style.display = 'none';
+      }
+    });
+  }
+</script>
+</body>
+</html>

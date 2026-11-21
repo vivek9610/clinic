@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin Dashboard — Verma's Homopath Clinic</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<!-- TOP NAVBAR (admin) -->
+<nav class="navbar">
+  <div class="nav-brand">
+    <img src="images/clinic-logo.png" alt="Verma Homeopathic Clinic" class="nav-logo-img" />
+    <h1>Verma's Homopath Clinic<small>Admin Dashboard</small></h1>
+  </div>
+  <div style="display:flex; align-items:center; gap:1rem;">
+    <span id="adminEmail" style="font-size:0.82rem; color:var(--text-light);"></span>
+    <a href="index.html" class="btn btn-outline" style="padding: 7px 16px; font-size: 0.82rem;">View Site</a>
+    <button id="topLogout" class="btn btn-outline" style="padding: 7px 16px; font-size: 0.82rem; border-color: #e57373; color: #c62828;">
+      Logout
+    </button>
+  </div>
+</nav>
+
+<div class="dashboard-layout">
+
+  <!-- SIDEBAR -->
+  <aside class="dashboard-sidebar">
+    <div class="sidebar-clinic">
+      <div class="sc-icon">⚕️</div>
+      <h3>Verma's Homopath<br>Clinic</h3>
+      <p>Doctor Admin Panel</p>
+    </div>
+    <nav class="sidebar-nav">
+      <a href="#" class="active"><span class="sn-icon"></span> Dashboard</a>
+      <a href="#" onclick="filterConsultations('All')"><span class="sn-icon"></span> All Consultations</a>
+      <a href="#" onclick="filterConsultations('Pending')"><span class="sn-icon"></span> Pending</a>
+      <a href="#" onclick="filterConsultations('Reviewed')"><span class="sn-icon"></span> Reviewed</a>
+    </nav>
+    <div class="sidebar-logout">
+      <button id="sidebarLogout"><span></span> Logout</button>
+    </div>
+  </aside>
+
+  <!-- MAIN CONTENT -->
+  <main class="dashboard-main">
+
+    <!-- Stats -->
+    <div class="dash-stats">
+      <div class="dash-stat-card">
+        <div class="dsc-icon total"></div>
+        <div>
+          <div class="dsc-num" id="statTotal">—</div>
+          <div class="dsc-label">Total Consultations</div>
+        </div>
+      </div>
+      <div class="dash-stat-card">
+        <div class="dsc-icon pending"></div>
+        <div>
+          <div class="dsc-num" id="statPending">—</div>
+          <div class="dsc-label">Pending Review</div>
+        </div>
+      </div>
+      <div class="dash-stat-card">
+        <div class="dsc-icon reviewed"></div>
+        <div>
+          <div class="dsc-num" id="statReviewed">—</div>
+          <div class="dsc-label">Reviewed</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Table Section -->
+    <div class="table-section">
+      <div class="table-top">
+        <h3>Patient Consultations</h3>
+        <div style="display:flex; gap:0.8rem; align-items:center; flex-wrap:wrap;">
+          <input type="text" class="table-search" id="searchInput" placeholder="  Search by name or disease..." oninput="renderTable()" />
+          <div class="table-filters">
+            <button class="filter-btn active" onclick="filterConsultations('All',this)">All</button>
+            <button class="filter-btn" onclick="filterConsultations('Pending',this)">Pending</button>
+            <button class="filter-btn" onclick="filterConsultations('Reviewed',this)">Reviewed</button>
+          </div>
+        </div>
+      </div>
+      <div class="table-wrapper">
+        <table class="consultations-table">
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>Patient Name</th>
+              <th>Age / Gender</th>
+              <th>Mobile</th>
+              <th>Disease</th>
+              <th>Submitted</th>
+              <th>Status</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody id="tableBody">
+            <tr>
+              <td colspan="8" class="empty-state">
+                <div class="e-icon"></div>
+                <div>Loading consultations...</div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </main>
+</div>
+
+<!-- NOTES MODAL -->
+<div class="modal-overlay" id="notesModal">
+  <div class="modal-box">
+    <div class="modal-header">
+      <h3>Add / Edit Doctor Notes</h3>
+      <button class="modal-close" onclick="closeModal()">✕</button>
+    </div>
+    <div class="modal-body">
+      <div class="patient-info" id="modalPatientInfo"></div>
+      <label style="font-size:0.84rem; font-weight:600; color:var(--text-mid); margin-bottom:6px; display:block;">
+        Doctor's Notes / Prescription Guidance
+      </label>
+      <textarea id="modalNotes" placeholder="Enter your notes, advice, or preliminary prescription guidance..."></textarea>
+    </div>
+    <div class="modal-footer">
+      <button class="btn btn-outline" onclick="closeModal()">Cancel</button>
+      <button class="btn btn-primary" onclick="saveNotes()"> Save Notes</button>
+    </div>
+  </div>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script src="js/admin-dashboard.js"></script>
+</body>
+</html>
+

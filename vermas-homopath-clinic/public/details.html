@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Treatment Process &amp; Approach — Verma's Homopath Clinic</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
+    .theory-box {
+      background: var(--white);
+      border-radius: var(--radius);
+      padding: 2.5rem;
+      box-shadow: var(--shadow);
+      border: 1px solid rgba(46, 134, 193, 0.12);
+      margin-bottom: 3.5rem;
+      position: relative;
+      overflow: hidden;
+    }
+    .theory-box::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0;
+      width: 5px; height: 100%;
+      background: linear-gradient(to bottom, var(--green-mid), var(--green-dark));
+    }
+    .theory-intro {
+      font-size: 1.05rem;
+      color: var(--text-mid);
+      line-height: 1.8;
+      margin-bottom: 2rem;
+    }
+    .theory-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1.5rem;
+    }
+    .theory-card {
+      background: var(--off-white);
+      padding: 1.4rem;
+      border-radius: 12px;
+      border-left: 3px solid var(--green-mid);
+      transition: var(--transition);
+    }
+    .theory-card:hover {
+      transform: translateY(-3px);
+      box-shadow: var(--shadow);
+    }
+    .theory-card h4 {
+      color: var(--green-dark);
+      font-size: 1.05rem;
+      margin-bottom: 0.5rem;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .theory-card p {
+      font-size: 0.88rem;
+      color: var(--text-mid);
+      line-height: 1.6;
+      margin: 0;
+    }
+    .duration-badge {
+      display: inline-block;
+      background: #ebf5fb;
+      color: var(--green-dark);
+      font-size: 0.78rem;
+      font-weight: 600;
+      padding: 3px 10px;
+      border-radius: 12px;
+      border: 1px solid rgba(46, 134, 193, 0.25);
+      margin-bottom: 0.8rem;
+      letter-spacing: 0.3px;
+    }
+    .process-card-custom {
+      background: var(--white);
+      border-radius: var(--radius);
+      padding: 2.2rem 1.8rem 1.8rem;
+      box-shadow: var(--shadow);
+      border: 1.5px solid rgba(46, 134, 193, 0.12);
+      position: relative;
+      transition: var(--transition);
+      display: flex;
+      flex-direction: column;
+    }
+    .process-card-custom:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 30px rgba(26, 82, 118, 0.15);
+      border-color: var(--green-mid);
+    }
+    .process-card-custom .step-badge {
+      position: absolute;
+      top: 1.4rem;
+      right: 1.4rem;
+      background: var(--green-pale);
+      color: var(--green-dark);
+      font-size: 0.74rem;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      padding: 4px 12px;
+      border-radius: 10px;
+      border: 1px solid rgba(46, 134, 193, 0.2);
+    }
+    .process-card-custom .step-icon {
+      width: 52px;
+      height: 52px;
+      border-radius: 14px;
+      background: var(--green-pale);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.6rem;
+      margin-bottom: 1.2rem;
+      transition: var(--transition);
+    }
+    .process-card-custom:hover .step-icon {
+      background: var(--green-mid);
+      color: var(--white);
+      transform: scale(1.05);
+    }
+    .process-card-custom h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.25rem;
+      color: var(--green-dark);
+      margin-bottom: 0.4rem;
+      line-height: 1.3;
+    }
+    .process-card-custom p {
+      font-size: 0.9rem;
+      color: var(--text-mid);
+      line-height: 1.7;
+      margin-bottom: 0;
+      flex-grow: 1;
+    }
+  </style>
+</head>
+<body>
+
+<!-- ══════════════════ NAVBAR ══════════════════ -->
+<nav class="navbar">
+  <div class="nav-brand">
+    <img src="images/clinic-logo.png" alt="Verma Homeopathic Clinic" class="nav-logo-img" />
+    <h1>Verma Homeopathic Clinic<small>Natural Healing &middot; Lasting Wellness</small></h1>
+  </div>
+  <ul class="nav-links" id="navLinks">
+    <li class="nav-item-home"><a href="index.html">Home</a></li>
+    <li class="nav-item-about"><a href="about.html">About Us</a></li>
+    <li class="nav-item-treatment"><a href="Treatment.html" class="active">Treatment</a></li>
+    <li class="nav-item-contact"><a href="contact.html">Contact</a></li>
+    <li class="nav-btn-item"><a href="consultation.html" class="btn-consult">Book Consultation</a></li>
+    <li class="nav-dropdown">
+      <div class="mobile-nav-heading">Resources</div>
+      <a href="#" class="dropdown-toggle">Resources <span class="arrow">&#9662;</span></a>
+      <ul class="dropdown-menu">
+        <li><a href="diet-lifestyle.html">Diet &amp; Lifestyle</a></li>
+        <li><a href="online-consultation.html">Online Consultation</a></li>
+        <li><a href="homeopathy-faq.html">Homeopathy FAQ</a></li>
+      </ul>
+    </li>
+  </ul>
+  <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- ══════════════════ PAGE BANNER ══════════════════ -->
+<div class="page-banner">
+  <h1>How We Work &amp; Our Treatment Approach</h1>
+  <p>Authentic Classical Homeopathy — Scientific, Individualized, Root-Cause Healing</p>
+</div>
+
+<!-- ══════════════════ HOW WE WORK & THEORY ══════════════════ -->
+<section style="background: var(--off-white); padding: 70px 2rem 50px;">
+  <div class="container">
+    
+    <div class="section-header">
+      <span class="pill-label">Treatment Philosophy</span>
+      <h2>How We Approach Healing</h2>
+      <p>True healing goes beyond suppressing external signs — it restores harmony within.</p>
+    </div>
+
+    <!-- Theory Card -->
+    <div class="theory-box">
+      <p class="theory-intro">
+        In classical homeopathy, we believe that disease is not simply an isolated physical problem, 
+        but an internal imbalance of the body's natural vital force. Instead of suppressing symptoms 
+        with heavy medications that only offer temporary relief, classical homeopathy gently stimulates 
+        the body's own immune and defense systems to heal itself permanently from within.
+      </p>
+
+      <div class="theory-grid">
+        <div class="theory-card">
+          <h4> Root-Cause Resolution</h4>
+          <p>We do not mask or suppress your symptoms. Every medicine is chosen to eliminate the deeper root trigger of the ailment.</p>
+        </div>
+        <div class="theory-card">
+          <h4> Constitutional Individualization</h4>
+          <p>No two patients are identical. Even for the same disease, each person receives a remedy tailored strictly to their own unique constitution.</p>
+        </div>
+        <div class="theory-card">
+          <h4> Zero Side Effects</h4>
+          <p>Our medicines are non-toxic, non-addictive, gentle, and prepared in microscopic doses that work in complete synergy with your body.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- 4 STEPS -->
+    <div class="section-header" style="margin-top: 1rem;">
+      <span class="pill-label">Our Process</span>
+      <h2>Our 4-Step Healing Methodology</h2>
+      <p>A systematic, precise, and transparent journey designed for your lasting recovery.</p>
+    </div>
+
+    <div class="process-grid" style="grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));">
+      
+      <!-- Step 1 -->
+      <div class="process-card-custom">
+        <span class="step-badge">Step 1</span>
+        <br>
+        <span class="duration-badge">⏱ 45–60 minutes</span>
+        <h3>Case-Taking</h3>
+        <p>A full history — your symptoms, sleep, emotions, food, family history. Not a 5-minute prescription.</p>
+      </div>
+
+      <!-- Step 2 -->
+      <div class="process-card-custom">
+        <span class="step-badge">Step 2</span>
+       <br>
+        <span class="duration-badge"> Before your remedy is chosen</span>
+        <h3>Constitutional Analysis</h3>
+        <p>We study the whole person behind the disease — what makes your case uniquely yours.</p>
+      </div>
+
+      <!-- Step 3 -->
+      <div class="process-card-custom">
+        <span class="step-badge">Step 3</span>
+      <br>
+        <span class="duration-badge">One medicine, precisely matched</span>
+        <h3>Remedy Selection</h3>
+        <p>The single most appropriate remedy for you — no combinations, no shortcuts, no guesswork.</p>
+      </div>
+
+      <!-- Step 4 -->
+      <div class="process-card-custom">
+        <span class="step-badge">Step 4</span>
+      <br>
+        <span class="duration-badge">Every 4–6 weeks</span>
+        <h3>Follow-Up &amp; Monitoring</h3>
+        <p>We track your response with reports and symptoms, adjusting the remedy as you progress.</p>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- ══════════════════ DOCTOR DETAILS SECTION ══════════════════ -->
+<section class="about-section" style="padding: 80px 2rem; background: var(--white);">
+  <div class="container">
+    <div class="about-grid">
+      <div class="about-visual">
+        <div class="doctor-placeholder" style="border:none; background:none; padding:0;">
+          <img src="images/image.jpg.jpeg" alt="Dr. Aman Verma - Homeopathic Physician" style="width:100%; max-width:380px; border-radius:24px; object-fit:cover; box-shadow: 0 10px 40px rgba(26,82,118,0.2);">
+        </div>
+        <div class="about-badge">
+          <span>3+</span>
+          Years of<br>Practice
+        </div>
+      </div>
+      <div class="about-text">
+        <div class="section-header" style="text-align:left; margin-bottom: 1.5rem;">
+          <span class="pill-label">The Doctor</span>
+        </div>
+        <h2>Dr. Aman Verma<br><span style="font-size:1.1rem; font-weight:400; font-family:'Poppins',sans-serif; color:var(--text-light);">Classical Homeopathic Physician</span></h2>
+        <p>
+          Dr. Verma is an experienced classical homeopathic practitioner. With a deep understanding of Hahnemannian principles, Dr. Verma focuses on treating each patient as a unique individual rather than just addressing isolated symptoms.
+        </p>
+        <p>
+          Hundreds of patients have benefitted from Dr. Verma's precise constitutional prescriptions — many of them after failing to find relief from conventional medicine. The clinic specializes in chronic, lifestyle, and pediatric diseases.
+        </p>
+        <div class="qualifications">
+          <div class="qual-item"><span class="q-dot"></span> BHMS — Bachelor of Homeopathic Medicine &amp; Surgery</div>
+          <div class="qual-item"><span class="q-dot"></span> Registered with State Homeopathy Council</div>
+          <div class="qual-item"><span class="q-dot"></span> 3+ Years Clinical Practice</div>
+          <div class="qual-item"><span class="q-dot"></span> 500+ Patients Successfully Treated</div>
+        </div>
+        <div style="display: flex; gap: 1rem; flex-wrap: wrap; margin-top: 1.5rem;">
+          <a href="consultation.html" class="btn btn-primary"> Book Consultation</a>
+          <a href="https://wa.me/918290168039" target="_blank" rel="noopener noreferrer" class="whatsapp-btn">
+            <span>Chat on WhatsApp</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════ FOOTER ══════════════════ -->
+<footer>
+  <div class="footer-grid">
+    <div class="footer-about">
+      <h3>🌿 Verma Homeopathic Clinic</h3>
+      <p>
+        Dedicated to providing authentic classical homeopathic treatment for over 3 years.
+        Your health is our mission — naturally, gently, permanently.
+      </p>
+    </div>
+    <div class="footer-links">
+      <h4>Quick Links</h4>
+      <a href="index.html">Home</a>
+      <a href="about.html">About Us</a>
+      <a href="Treatment.html">Treatment</a>
+      <a href="diet-lifestyle.html">Diet &amp; Lifestyle</a>
+      <a href="online-consultation.html">Online Consultation</a>
+      <a href="homeopathy-faq.html">Homeopathy FAQ</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    <div class="footer-contact">
+      <h4>Clinic Hours</h4>
+      <div class="fc-item"><span>🕘</span><span>Sat–Sun: 9 AM–1 PM</span></div>
+      <div class="fc-item"><span>🕔</span><span>Sat–Sun: 5 PM–8 PM</span></div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 Verma Homeopathic Clinic. All rights reserved.</span>
+    <span>Healing Naturally · Growing Together 🌱</span>
+  </div>
+</footer>
+
+<!-- Floating WhatsApp Button -->
+<a href="https://wa.me/918290168039" class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp" title="Chat on WhatsApp">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+    <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/>
+  </svg>
+</a>
+
+<script src="js/nav.js"></script>
+</body>
+</html>

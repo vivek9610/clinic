@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin Login — Verma Homoeopathic Clinic</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<div class="admin-page">
+  <div class="admin-login-card">
+    <div class="admin-login-header">
+      <h2>Admin Login</h2>
+      <p>Verma Homoeopathic Clinic — Doctor Portal</p>
+    </div>
+    <div class="admin-login-body">
+      <div class="form-msg" id="loginMsg"></div>
+      <form id="loginForm" novalidate>
+        <div class="form-group">
+          <label for="email">Email Address</label>
+          <input type="email" id="email" placeholder="admin@clinic.com" required />
+        </div>
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input type="password" id="password" placeholder="Enter your password" required />
+        </div>
+        <button type="submit" class="btn btn-primary" id="loginBtn">
+          <span id="loginText"> Sign In</span>
+          <span class="loader" id="loginLoader" style="display:none;"></span>
+        </button>
+      </form>
+      <p style="text-align:center; margin-top: 1.2rem; font-size:0.78rem; color:var(--text-light);">
+        <a href="index.html" style="color: var(--green-mid);">← Back to Website</a>
+      </p>
+    </div>
+  </div>
+</div>
+
+<script src="js/admin-login.js"></script>
+</body>
+</html>
+
